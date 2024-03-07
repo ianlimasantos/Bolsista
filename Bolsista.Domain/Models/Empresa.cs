@@ -8,10 +8,11 @@ namespace Bolsista.Domain.Models
 {
     public class Empresa
     {
-        public int Id { get; set; }
-        public string NomeFantasia { get; set; }
-        public string RazaoSocial { get; set; }
-        public string Cnpj { get; set; }
+        public long Id { get; private set; }
+        public string NomeFantasia { get; private set; }
+        public string RazaoSocial { get; private set; }
+        public string Cnpj { get; private set; }
+        public virtual ICollection<Projeto> Projeto { get; private set; } 
 
         public Empresa(string nomeFantasia, string razaoSocial, string cnpj) 
         {

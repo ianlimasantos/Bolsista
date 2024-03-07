@@ -8,23 +8,24 @@ namespace Bolsista.Domain.Models
 {
     public class Projeto
     {
-        public int Id { get; private set; }
+        public long Id { get; private set; }
         public string Nome { get; private set; }
         public string Descricao { get; private set; }
-        public int Empresa {  get; private set; }
+        public int EmpresaId {  get; private set; }
+        public virtual Empresa empresa { get; private set; }
 
         public Projeto(string nome, string descricao, int empresa)
         {
             Nome = nome;
             Descricao = descricao;
-            Empresa = empresa;
+            EmpresaId = empresa;
         }
 
         public void Atualizar(string nome, string descricao, int empresa)
         {
             Nome = nome;
             Descricao = descricao;
-            Empresa = empresa;
+            EmpresaId = empresa;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Bolsista.Domain.Interfaces.Repositories
     public interface IBaseRepository<T> where T: class
     {
         IUnitOfWork UnitOfWork { get; }
-        Task<T> GetIdAsync (int id);
+        Task<T> GetIdAsync (long id);
         Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>> predicate);
     }
 }
