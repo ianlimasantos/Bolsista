@@ -14,6 +14,7 @@ namespace Bolsista.Application.Mapper
         public DomainToViewProfile() 
         {
             CreateMap<PessoaBolsista, PessoaBolsistaViewModel>();
+            CreateMap<Empresa, EmpresaViewModel>();
         }
     }
 }

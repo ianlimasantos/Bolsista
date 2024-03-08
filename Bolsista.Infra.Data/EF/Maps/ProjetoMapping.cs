@@ -15,13 +15,14 @@ namespace Bolsista.Infra.Data.EF.Maps
         {
             builder.HasKey(t => t.Id);
 
-            builder.Property(t => t.Nome)
-                .HasColumnName("nome")
-                .IsRequired();
+            builder.Property(t => t.Nome).IsRequired();
+            builder.Property(t => t.Descricao).IsRequired();
+            builder.Property(t => t.EmpresaId).IsRequired();
 
-            builder.Property(t => t.Descricao)
-                .HasColumnName("")
-                .IsRequired();
+            builder.HasOne(t => t.Empresa)
+                .WithMany(t => t.Projeto)
+                .HasForeignKey(t => t.EmpresaId);
+            
         }
     }
 }

@@ -18,4 +18,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Bolsista.Infra.Data\Bolsista.Infra.Data.csproj" />
+    <ProjectReference Include="..\Bolsista.Infra.Ioc\Bolsista.Infra.Ioc.csproj" />
+  </ItemGroup>
+
 </Project>

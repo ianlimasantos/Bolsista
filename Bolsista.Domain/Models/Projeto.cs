@@ -12,7 +12,8 @@ namespace Bolsista.Domain.Models
         public string Nome { get; private set; }
         public string Descricao { get; private set; }
         public int EmpresaId {  get; private set; }
-        public virtual Empresa empresa { get; private set; }
+        public virtual Empresa Empresa { get; private set; }
+        public virtual ICollection<PessoaBolsista> PessoasBolsistas { get; private set; }
 
         public Projeto(string nome, string descricao, int empresa)
         {

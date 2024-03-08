@@ -20,6 +20,8 @@ namespace Bolsista.Infra.Data.EF
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new BolsistaMapping());
+            modelBuilder.ApplyConfiguration(new EmpresaMapping());
+            modelBuilder.ApplyConfiguration(new ProjetoMapping());
             base.OnModelCreating(modelBuilder);
         }
 
